@@ -1,0 +1,41 @@
+export ZSH_CONF=$HOME/.config/zsh
+export OHMYZSH=$ZSH_CONF/.oh-my-zsh
+
+PATH=$PATH:/home/eljot/.local/bin
+
+ZSH_THEME="agnoster"
+COMPLETION_WAITING_DOTS="%F{yellow}...%f"
+HIST_STAMPS="yyyy-mm-dd"
+ENABLE_CORRECTION="true"
+
+zstyle :omz:update mode reminder
+zstyle :omz:plugins:keychain agents gpg,ssh
+zstyle :omz:plugins:keychain identities id_rsa
+
+plugins=(
+		colorize
+		composer
+		docker
+		docker-compose
+		eza
+		fzf
+		git
+		golang
+		keychain
+		{{- if eq .chezmoi.os "linux" }}
+		{{-   if not (.chezmoi.kernel.osrelease | lower | contains "microsoft") }}
+		kitty
+		{{-   end }}
+		{{- end }}
+		node
+		npm
+		nvm
+		rust
+		zsh-autosuggestions
+		zsh-syntax-highlighting
+	)
+
+source $OHMYZSH/oh-my-zsh.sh
+source $ZSH_CONF/.alias_map.zsh
+
+
