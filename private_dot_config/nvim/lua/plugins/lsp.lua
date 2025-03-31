@@ -3,28 +3,22 @@ return {
 
 	dependencies = {
 		"williamboman/mason.nvim",
-		"williamboman/mason-lspconfig.nvim",
 	},
 
 	config = function()
 		local lspconfig = require("lspconfig")
 		local mason = require("mason")
-		local masonlspconfig = require("mason-lspconfig")
 
 		mason.setup()
-		masonlspconfig.setup({
-			ensure_installed = {
-				"biome",
-				"bashls",
-				"gopls",
-				"nginx_language_server",
-				"nil_ls",
-				"lua_ls",
-				"superhtml",
-				"twiggy_language_server",
-				"yamlls",
-			},
-			automatic_installation = true,
-		})
+
+		lspconfig.biome.setup({})
+		lspconfig.bashls.setup({})
+		lspconfig.gopls.setup({})
+		lspconfig.nginx_language_server.setup({})
+		lspconfig.nil_ls.setup({})
+		lspconfig.lua_ls.setup({})
+		lspconfig.superhtml.setup({})
+		lspconfig.twiggy_language_server.setup({})
+		lspconfig.yamlls.setup({})
 	end,
 }
