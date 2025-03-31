@@ -24,6 +24,7 @@ return {
 				"twiggy_language_server",
 				"yamlls",
 			},
+			automatic_installation = true,
 		})
 	end,
 }
