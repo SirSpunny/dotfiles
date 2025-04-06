@@ -1,23 +1,28 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	config = function()
-		local configs = require("nvim-treesitter.configs")
-		configs.setup({
-			ensure_installed = {
-				"go",
-				"html",
-				"markdown",
-				"markdown_inline",
-				"javascript",
-				"lua",
-				"vim",
-				"vimdoc",
-				"yaml",
-				"toml",
-			},
-			highlight = { enable = true },
-			indent = { enable = true },
-		})
+	opts = {
+		ensure_installed = {
+			"go",
+			"html",
+			"markdown",
+			"markdown_inline",
+			"javascript",
+			"typescript",
+			"json",
+			"lua",
+			"vim",
+			"vimdoc",
+			"vue",
+			"yaml",
+			"toml",
+		},
+		autotag = { enable = true },
+		context = { enable = true },
+		highlight = { enable = true },
+		indent = { enable = true },
+	},
+	config = function(_, opts)
+		require("nvim-treesitter.configs").setup(opts)
 	end,
 }

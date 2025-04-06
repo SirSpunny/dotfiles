@@ -1,7 +1,8 @@
 export ZSH_CONF=$HOME/.config/zsh
 export OHMYZSH=$ZSH_CONF/.oh-my-zsh
 
-PATH=$PATH:/home/eljot/.local/bin
+PATH=$PATH:$HOME/.local/bin
+PATH=$PATH:$HOME/.local/share/lua-language-server/bin
 
 ZSH_THEME="agnoster"
 COMPLETION_WAITING_DOTS="%F{yellow}...%f"
@@ -38,4 +39,5 @@ plugins=(
 source $OHMYZSH/oh-my-zsh.sh
 source $ZSH_CONF/.alias_map.zsh
 
+export PATH=$PATH:/usr/local/go/bin
 
