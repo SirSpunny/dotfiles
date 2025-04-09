@@ -1,4 +1,4 @@
--- normal ode
+-- normal mode
 vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "[w]rite buffer" })
 vim.keymap.set("n", "<leader>q", ":q!<CR>", { desc = "[w]rite buffer" })
 vim.keymap.set("n", "<leader>wq", ":w<CR>:q!<CR>", { desc = "[w]rite buffer" })

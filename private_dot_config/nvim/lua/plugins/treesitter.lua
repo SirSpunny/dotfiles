@@ -1,6 +1,7 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
+	dependencies = { "nvim-treesitter/nvim-treesitter-context" },
 	opts = {
 		ensure_installed = {
 			"go",
