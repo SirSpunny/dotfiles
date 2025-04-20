@@ -81,35 +81,35 @@ return {
 			function()
 				Snacks.picker.smart()
 			end,
-			desc = "Smart Find Files",
+			desc = "smart find files",
 		},
 		{
 			"<leader>/",
 			function()
 				Snacks.picker.grep()
 			end,
-			desc = "Grep",
+			desc = "grep",
 		},
 		{
 			"<leader>:",
 			function()
 				Snacks.picker.command_history()
 			end,
-			desc = "Command History",
+			desc = "command history",
 		},
 		{
 			"<leader>e",
 			function()
 				Snacks.explorer()
 			end,
-			desc = "File Explorer",
+			desc = "[e]xplore files",
 		},
 		{
 			"<leader>tt",
 			function()
 				Snacks.terminal()
 			end,
-			desc = "Toggle Terminal",
+			desc = "[t]oggle",
 		},
 		-- git
 		{
@@ -174,7 +174,7 @@ return {
 			function()
 				Snacks.picker.git_files()
 			end,
-			desc = "Find Git Files",
+			desc = "Git Files",
 		},
 		-- search
 		{

@@ -3,14 +3,13 @@ return {
 	event = "VeryLazy",
 	opts = {
 		preset = "helix",
-	},
-	keys = {
-		{
-			"<leader>?",
-			function()
-				require("which-key").show({ global = false })
-			end,
-			desc = "Buffer Local Keymaps (which-key)",
+		spec = {
+			{ "<leader>s", group = "search" },
+			{ "<leader>g", group = "git" },
+			{ "<leader>t", group = "terminal" },
+		},
+		icons = {
+			separator = " ",
 		},
 	},
 }
