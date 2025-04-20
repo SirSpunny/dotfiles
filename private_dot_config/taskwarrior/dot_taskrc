@@ -3,3 +3,5 @@ data.location=$HOME/.local/share/taskwarrior/task
 
 verbose=blank,footnote,label,new-id,affected,edit,special,project,sync,unwait
 
+color.project.nvim=on color2
+color.project.chezmoi=on color5
